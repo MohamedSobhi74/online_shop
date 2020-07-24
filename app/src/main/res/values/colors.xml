@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="yellow_A700">#FFD600</color>
+    <color name="yellow_700">#FBC02D</color>
+
+    <color name="red_700">#D32F2F</color>
+    <color name="red_A700">#D50000</color>
+
+</resources>

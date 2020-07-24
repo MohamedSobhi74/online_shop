@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    tools:context=".presentations.ui.ui.home.HomeFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/banner_slider1"
+        app:imageScaleType="fitCenter"
+        app:carouselBackground="#fff"
+        app:carouselType="BLOCK"
+        app:scaleOnScroll="false"
+        app:scalingFactor="0.15"
+        app:showIndicator="false"
+        app:showCaption="false"
+        app:showNavigationButtons="false"
+        app:autoWidthFixing="true"
+        app:autoPlay="true"
+        app:autoPlayDelay="3000"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        />
+
+    <TextView
+        android:id="@+id/product_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تصفح حسب الفئة"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_slider1"
+        android:textSize="20sp"
+        android:textColor="#555"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/all_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="عرض الكل"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_slider1"
+        android:textSize="18sp"
+        android:textColor="#4CAF50"
+        android:layout_margin="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_category"
+        tools:listitem="@layout/category_item"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_category_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_recycler"
+        tools:listitem="@layout/product_recycler_item"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
